@@ -1,14 +1,14 @@
 package kr.easw.lesson04;
 
 /**
- * í•´ë‹¹ í´ë˜ìŠ¤ëŠ” {@link TestInterface}ë¥¼ ìƒì†ë°›ì•„ ìƒˆ ë²„ì „ì„ êµ¬í˜„í•˜ëŠ” ì½”ë“œë¥¼ ê°€ì§€ê³  ìˆìŠµë‹ˆë‹¤.
+ * ÇØ´ç Å¬·¡½º´Â {@link TestInterface}¸¦ »ó¼Ó¹Ş¾Æ »õ ¹öÀüÀ» ±¸ÇöÇÏ´Â ÄÚµå¸¦ °¡Áö°í ÀÖ½À´Ï´Ù.
  *
- * í•´ë‹¹ ë¬¸ì œì—ì„œëŠ” {@link TestV1}, {@link TestV2}, {@link TestV3} 3ê°œì˜ í´ë˜ìŠ¤ë¥¼ ìˆ˜ì •í•´ ì •ìƒì ì¸ ê°’ì„ ë„ì¶œí•˜ë„ë¡ í•´ì•¼ í•©ë‹ˆë‹¤.
+ * ÇØ´ç ¹®Á¦¿¡¼­´Â {@link TestV1}, {@link TestV2}, {@link TestV3} 3°³ÀÇ Å¬·¡½º¸¦ ¼öÁ¤ÇØ Á¤»óÀûÀÎ °ªÀ» µµÃâÇÏµµ·Ï ÇØ¾ß ÇÕ´Ï´Ù.
  *
- * ì´ëŠ” ë‹¤ìŒì˜ ì¡°ê±´ì„ ë”°ë¼ì•¼ í•©ë‹ˆë‹¤ :
- * - TestV1 í´ë˜ìŠ¤ëŠ” ì…ë ¥ëœ ë¬¸ìì—´ì„ ê·¸ëŒ€ë¡œ ë°˜í™˜í•´ì•¼ í•©ë‹ˆë‹¤.
- * - TestV2 í´ë˜ìŠ¤ëŠ” ì…ë ¥ëœ ë¬¸ìì—´ì—ì„œ ëŠë‚Œí‘œ(!)ë¥¼ ë¬¼ìŒí‘œ(?)ë¡œ ë°”ê¿”ì•¼ í•©ë‹ˆë‹¤.
- * - TestV3 í´ë˜ìŠ¤ëŠ” ì…ë ¥ëœ ë¬¸ìì—´ì—ì„œ ëŠë‚Œí‘œ(!)ë¥¼ ë¬¼ìŒí‘œ(?)ë¡œ ë°”ê¾¸ê³ , ê³µë°±( )ì„ ì œê±°í•´ì•¼ í•©ë‹ˆë‹¤.
+ * ÀÌ´Â ´ÙÀ½ÀÇ Á¶°ÇÀ» µû¶ó¾ß ÇÕ´Ï´Ù :
+ * - TestV1 Å¬·¡½º´Â ÀÔ·ÂµÈ ¹®ÀÚ¿­À» ±×´ë·Î ¹İÈ¯ÇØ¾ß ÇÕ´Ï´Ù.
+ * - TestV2 Å¬·¡½º´Â ÀÔ·ÂµÈ ¹®ÀÚ¿­¿¡¼­ ´À³¦Ç¥(!)¸¦ ¹°À½Ç¥(?)·Î ¹Ù²ã¾ß ÇÕ´Ï´Ù.
+ * - TestV3 Å¬·¡½º´Â ÀÔ·ÂµÈ ¹®ÀÚ¿­¿¡¼­ ´À³¦Ç¥(!)¸¦ ¹°À½Ç¥(?)·Î ¹Ù²Ù°í, °ø¹é( )À» Á¦°ÅÇØ¾ß ÇÕ´Ï´Ù.
  */
 public class VersioningEncapsulationExample {
     public static String VALUE = "Hello, World!";
@@ -20,20 +20,20 @@ public class VersioningEncapsulationExample {
     public static void main(String[] args) {
         TestInterface test = new TestV1();
         if (!test.doAction(VALUE).equals(VALUE)) {
-            System.out.println("ì˜¤ë‹µì…ë‹ˆë‹¤.");
+            System.out.println("¿À´äÀÔ´Ï´Ù.");
             return;
         }
         test = new TestV2();
         if (!test.doAction(VALUE).equals(RESULT_SECOND)) {
-            System.out.println("ì˜¤ë‹µì…ë‹ˆë‹¤.");
+            System.out.println("¿À´äÀÔ´Ï´Ù.");
             return;
         }
         test = new TestV3();
         if (!test.doAction(VALUE).equals(RESULT_THIRD)) {
-            System.out.println("ì˜¤ë‹µì…ë‹ˆë‹¤.");
+            System.out.println("¿À´äÀÔ´Ï´Ù.");
             return;
         }
-        System.out.println("ì •ë‹µì…ë‹ˆë‹¤.");
+        System.out.println("Á¤´äÀÔ´Ï´Ù.asd");
     }
 
     interface TestInterface {
@@ -44,7 +44,7 @@ public class VersioningEncapsulationExample {
     static class TestV1 implements TestInterface {
         @Override
         public String doAction(String type) {
-            throw new RuntimeException("ì´ ì½”ë“œ ë¼ì¸ì„ ì§€ìš°ê³ , ì´ê³³ì—ì„œ ì‘ì„±í•˜ì‹­ì‹œì˜¤.");
+            return type;
         }
     }
 
@@ -53,7 +53,7 @@ public class VersioningEncapsulationExample {
     static class TestV2 implements TestInterface {
         @Override
         public String doAction(String type) {
-            throw new RuntimeException("ì´ ì½”ë“œ ë¼ì¸ì„ ì§€ìš°ê³ , ì´ê³³ì—ì„œ ì‘ì„±í•˜ì‹­ì‹œì˜¤.");
+            return type.replace('!','?');
         }
     }
 
@@ -62,7 +62,7 @@ public class VersioningEncapsulationExample {
     static class TestV3 implements TestInterface {
         @Override
         public String doAction(String type) {
-            throw new RuntimeException("ì´ ì½”ë“œ ë¼ì¸ì„ ì§€ìš°ê³ , ì´ê³³ì—ì„œ ì‘ì„±í•˜ì‹­ì‹œì˜¤.");
+            return type.replace('!','?').replace(" ","");
         }
     }
 }

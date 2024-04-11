@@ -1,17 +1,17 @@
 package kr.easw.lesson04;
 
 /**
- * í•´ë‹¹ í´ëž˜ìŠ¤ëŠ” Vehicle í´ëž˜ìŠ¤ë¥¼ ìƒì†í•´, ì›í•˜ëŠ” ê°’ì„ ë„£ì–´ ì£¼í–‰ì— ì„±ê³µí•˜ëŠ”ê²ƒì„ ëª©í‘œë¡œ í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
+ * ÇØ´ç Å¬·¡½º´Â Vehicle Å¬·¡½º¸¦ »ó¼ÓÇØ, ¿øÇÏ´Â °ªÀ» ³Ö¾î ÁÖÇà¿¡ ¼º°øÇÏ´Â°ÍÀ» ¸ñÇ¥·Î ÇÏ°í ÀÖ½À´Ï´Ù.
  * <p>
- * í•´ë‹¹ ë¬¸ì œì—ì„œëŠ” Vehicle í´ëž˜ìŠ¤ë¥¼ ìƒì†í•˜ëŠ” ìƒˆ í´ëž˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ëŠ”ê²ƒê³¼ getVehicle í´ëž˜ìŠ¤ë¥¼ ìˆ˜ì •í•˜ëŠ”ê²ƒë§Œì´ í—ˆìš©ë©ë‹ˆë‹¤.
+ * ÇØ´ç ¹®Á¦¿¡¼­´Â Vehicle Å¬·¡½º¸¦ »ó¼ÓÇÏ´Â »õ Å¬·¡½º¸¦ ¼±¾ðÇÏ´Â°Í°ú getVehicle Å¬·¡½º¸¦ ¼öÁ¤ÇÏ´Â°Í¸¸ÀÌ Çã¿ëµË´Ï´Ù.
  * <p>
- * ì´ ë¬¸ì œëŠ” ë‹¤ìŒì˜ ì¡°ê±´ì„ ë”°ë¼ì•¼ í•©ë‹ˆë‹¤ :
- * - ìžì‹ ë§Œì˜ ìƒˆ í´ëž˜ìŠ¤ë¥¼ ìƒì„±í•©ë‹ˆë‹¤. ìƒˆ í´ëž˜ìŠ¤ëŠ” Vehicleì„ ìƒì†ë°›ì•„ì•¼ í•©ë‹ˆë‹¤.
- * - êµ¬í˜„ëœ Vehicleì„ ìƒì†í•œ í´ëž˜ìŠ¤ë¥¼ getVehicle ë©”ì„œë“œê°€ ë°˜í™˜í•˜ë„ë¡ ìˆ˜ì •í•´ì•¼ í•©ë‹ˆë‹¤.
- * - (ì„ íƒ) ìˆ˜í–‰ë¥ ì´ 100% ì´ìƒì´ì—¬ì•¼ í•©ë‹ˆë‹¤. ìˆ˜í–‰ë¥ ì€ ìµœëŒ€ í‹±ê¹Œì§€ ì§„í–‰ì´ ë˜ì—ˆëŠ”ì§€ì˜ ì²™ë„ì´ë©°, ì—°ë£Œê°€ ë¶€ì¡±í•  ê²½ìš° í‹±ì´ ì¤‘ë‹¨ë©ë‹ˆë‹¤.
- * - (ì„ íƒ) ìµœëŒ€í•œ ë†’ì€ ì ìˆ˜ë¥¼ ë°›ì•„ì•¼ í•©ë‹ˆë‹¤.
+ * ÀÌ ¹®Á¦´Â ´ÙÀ½ÀÇ Á¶°ÇÀ» µû¶ó¾ß ÇÕ´Ï´Ù :
+ * - ÀÚ½Å¸¸ÀÇ »õ Å¬·¡½º¸¦ »ý¼ºÇÕ´Ï´Ù. »õ Å¬·¡½º´Â VehicleÀ» »ó¼Ó¹Þ¾Æ¾ß ÇÕ´Ï´Ù.
+ * - ±¸ÇöµÈ VehicleÀ» »ó¼ÓÇÑ Å¬·¡½º¸¦ getVehicle ¸Þ¼­µå°¡ ¹ÝÈ¯ÇÏµµ·Ï ¼öÁ¤ÇØ¾ß ÇÕ´Ï´Ù.
+ * - (¼±ÅÃ) ¼öÇà·üÀÌ 100% ÀÌ»óÀÌ¿©¾ß ÇÕ´Ï´Ù. ¼öÇà·üÀº ÃÖ´ë Æ½±îÁö ÁøÇàÀÌ µÇ¾ú´ÂÁöÀÇ Ã´µµÀÌ¸ç, ¿¬·á°¡ ºÎÁ·ÇÒ °æ¿ì Æ½ÀÌ Áß´ÜµË´Ï´Ù.
+ * - (¼±ÅÃ) ÃÖ´ëÇÑ ³ôÀº Á¡¼ö¸¦ ¹Þ¾Æ¾ß ÇÕ´Ï´Ù.
  * <p>
- * ë¬¸ì œê°€ ë„ˆë¬´ ì–´ë ¤ìš´ ê²½ìš°, ê¸°ë³¸ ì¡°ê±´ë§Œ ì¶©ì¡±í•´ë„ ê´œì°®ìŠµë‹ˆë‹¤.
+ * ¹®Á¦°¡ ³Ê¹« ¾î·Á¿î °æ¿ì, ±âº» Á¶°Ç¸¸ ÃæÁ·ÇØµµ ±¦Âú½À´Ï´Ù.
  */
 public class ModularExample {
     public static int MAX_TICK = 5000;
@@ -39,11 +39,11 @@ public class ModularExample {
             totalEnergy += energy.createEnergy(tickUsed);
         }
         int percentage = (int) (((double) tickUsed) / ((double) (MAX_TICK)) * 100.0);
-        System.out.println("ì£¼í–‰ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤!");
-        System.out.println("ìˆ˜í–‰ë¥  : " + percentage + "%");
-        System.out.println("ì´ ì´ë™ê±°ë¦¬: " + totalEnergy);
-        System.out.println("ë‚¨ì€ ì—°ë£Œ: " + leftFuel);
-        System.out.println("ìµœì¢… ì ìˆ˜: " + calculateScore(tickUsed, totalEnergy, leftFuel));
+        System.out.println("ÁÖÇàÀÌ Á¾·áµÇ¾ú½À´Ï´Ù!");
+        System.out.println("¼öÇà·ü : " + percentage + "%");
+        System.out.println("ÃÑ ÀÌµ¿°Å¸®: " + totalEnergy);
+        System.out.println("³²Àº ¿¬·á: " + leftFuel);
+        System.out.println("ÃÖÁ¾ Á¡¼ö: " + calculateScore(tickUsed, totalEnergy, leftFuel));
     }
 
     private static int calculateScore(int totalTick, int totalEnergy, int leftFuel) {
@@ -53,26 +53,26 @@ public class ModularExample {
     }
 
     /**
-     * í•´ë‹¹ ë©”ì„œë“œëŠ” ë‹¤ìŒê³¼ ê°™ì€ ì—­í• ì„ ê°€ì ¸ì•¼ í•©ë‹ˆë‹¤ :
+     * ÇØ´ç ¸Þ¼­µå´Â ´ÙÀ½°ú °°Àº ¿ªÇÒÀ» °¡Á®¾ß ÇÕ´Ï´Ù :
      * <p>
-     * ìƒì†í•˜ì—¬ êµ¬í˜„í•œ Vehicle ê°ì²´ë¥¼ ë°˜í™˜í•´ì•¼ í•©ë‹ˆë‹¤.
+     * »ó¼ÓÇÏ¿© ±¸ÇöÇÑ Vehicle °´Ã¼¸¦ ¹ÝÈ¯ÇØ¾ß ÇÕ´Ï´Ù.
      */
     public static Vehicle getVehicle() {
-        throw new RuntimeException("ì´ ì½”ë“œ ë¼ì¸ì„ ì§€ìš°ê³ , ì´ê³³ì—ì„œ ìž‘ì„±í•˜ì‹­ì‹œì˜¤.");
+        throw new RuntimeException("ÀÌ ÄÚµå ¶óÀÎÀ» Áö¿ì°í, ÀÌ°÷¿¡¼­ ÀÛ¼ºÇÏ½Ê½Ã¿À.");
     }
 
-    // í•´ë‹¹ í´ëž˜ìŠ¤ë¥¼ ìƒì†í•˜ì—¬ êµ¬í˜„í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.
+    // ÇØ´ç Å¬·¡½º¸¦ »ó¼ÓÇÏ¿© ±¸ÇöÇÏ¿©¾ß ÇÕ´Ï´Ù.
     static abstract class Vehicle {
-        // EnergyëŠ” ì‚¬ìš©í•  ì—ë„ˆì§€ë¥¼ ëœ»í•©ë‹ˆë‹¤.
-        // CoalEnergy, HumanEnergy, SunlightEnergy 3ê°œê°€ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.
+        // Energy´Â »ç¿ëÇÒ ¿¡³ÊÁö¸¦ ¶æÇÕ´Ï´Ù.
+        // CoalEnergy, HumanEnergy, SunlightEnergy 3°³°¡ »ç¿ë °¡´ÉÇÕ´Ï´Ù.
         public abstract Energy getEnergy();
 
-        // VehicleTypeì€ íƒˆê²ƒì˜ íƒ€ìž…ìž…ë‹ˆë‹¤.
-        // íƒ€ìž…ì— ë”°ë¼ í‹±ë‹¹ ì†Œëª¨ ë¹„ìš©ì´ ë‹¤ë¦…ë‹ˆë‹¤.
+        // VehicleTypeÀº Å»°ÍÀÇ Å¸ÀÔÀÔ´Ï´Ù.
+        // Å¸ÀÔ¿¡ µû¶ó Æ½´ç ¼Ò¸ð ºñ¿ëÀÌ ´Ù¸¨´Ï´Ù.
         public abstract VehicleType getType();
 
-        // ê° í‹±ì´ ì‹¤í–‰ë˜ê¸° ì „ì— ì‹¤í–‰ë©ë‹ˆë‹¤.
-        // ì´ ë©”ì„œë“œë¥¼ í†µí•´ ì¡°ê¸ˆ ë” ë‚˜ì€ ê²°ê³¼ë¥¼ ë„ì¶œí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+        // °¢ Æ½ÀÌ ½ÇÇàµÇ±â Àü¿¡ ½ÇÇàµË´Ï´Ù.
+        // ÀÌ ¸Þ¼­µå¸¦ ÅëÇØ Á¶±Ý ´õ ³ªÀº °á°ú¸¦ µµÃâÇÒ ¼ö ÀÖ½À´Ï´Ù.
         public abstract void onTick(int currentTick, int fuel);
     }
 

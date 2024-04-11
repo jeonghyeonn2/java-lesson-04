@@ -1,26 +1,26 @@
 package kr.easw.lesson04;
 /**
- * í•´ë‹¹ í´ëž˜ìŠ¤ëŠ” Carì„ ìƒì†ë°›ì•„ ì—°ë¹„ ê°’ì„ í™•ì¸í•˜ëŠ” ì½”ë“œë¥¼ ê°–ê³  ìžˆìŠµë‹ˆë‹¤.
+ * ÇØ´ç Å¬·¡½º´Â CarÀ» »ó¼Ó¹Þ¾Æ ¿¬ºñ °ªÀ» È®ÀÎÇÏ´Â ÄÚµå¸¦ °®°í ÀÖ½À´Ï´Ù.
  *
- * ì´ ì½”ë“œì—ì„œëŠ” ì„¸í„°ì— ì•„ë¬´ëŸ° í•„í„°ë§ì´ ì¡´ìž¬í•˜ì§€ ì•Šì•„ ì´ ê°’ì„ ê²€ì¦í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+ * ÀÌ ÄÚµå¿¡¼­´Â ¼¼ÅÍ¿¡ ¾Æ¹«·± ÇÊÅÍ¸µÀÌ Á¸ÀçÇÏÁö ¾Ê¾Æ ÀÌ °ªÀ» °ËÁõÇÒ ¼ö ¾ø½À´Ï´Ù.
  *
- * {@link Car} í´ëž˜ìŠ¤ë§Œì„ ìˆ˜ì •í•´ {@link PerformanceManipulation} í´ëž˜ìŠ¤ì—ì„œ ìˆ˜í–‰í•˜ëŠ” ê°’ ì¡°ìž‘ì„ ë§‰ì•„ì•¼ í•©ë‹ˆë‹¤.
+ * {@link Car} Å¬·¡½º¸¸À» ¼öÁ¤ÇØ {@link PerformanceManipulation} Å¬·¡½º¿¡¼­ ¼öÇàÇÏ´Â °ª Á¶ÀÛÀ» ¸·¾Æ¾ß ÇÕ´Ï´Ù.
  *
- * ì´ëŠ” ë‹¤ìŒì˜ ì¡°ê±´ì„ ë”°ë¼ì•¼ í•©ë‹ˆë‹¤ :
- * - í˜„ìž¬ ì—°ë¹„ë³´ë‹¤ ë†’ì€ ê°’ì„ ì„¤ì •í•˜ë ¤ í•  ê²½ìš°, ì¢…ë¥˜ ìƒê´€ ì—†ì´ ì˜¤ë¥˜ë¥¼ ë°œìƒì‹œì¼œì•¼ í•©ë‹ˆë‹¤.
+ * ÀÌ´Â ´ÙÀ½ÀÇ Á¶°ÇÀ» µû¶ó¾ß ÇÕ´Ï´Ù :
+ * - ÇöÀç ¿¬ºñº¸´Ù ³ôÀº °ªÀ» ¼³Á¤ÇÏ·Á ÇÒ °æ¿ì, Á¾·ù »ó°ü ¾øÀÌ ¿À·ù¸¦ ¹ß»ý½ÃÄÑ¾ß ÇÕ´Ï´Ù.
  *
- * ì˜¤ë¥˜ëŠ” throw new êµ¬ë¬¸ìœ¼ë¡œ ë°œìƒì‹œí‚¬ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ * ¿À·ù´Â throw new ±¸¹®À¸·Î ¹ß»ý½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.
  */
 public class EncapsulationExample {
     public static void main(String[] args) {
         try {
             Car car = getCar();
-            System.out.printf("ì°¨ ì´ë¦„: %s\n", car.carName);
-            System.out.printf("ì—°ë¹„: %.2fL/h", car.realFuelEfficiency);
-            System.out.println("ì˜¤ë‹µìž…ë‹ˆë‹¤.");
+            System.out.printf("Â÷ ÀÌ¸§: %s\n", car.carName);
+            System.out.printf("¿¬ºñ: %.2fL/h", car.realFuelEfficiency);
+            System.out.println("¿À´äÀÔ´Ï´Ù.");
         } catch (Exception e) {
-            System.out.println("ì—°ë¹„ ì¡°ìž‘ì´ í™•ì¸ë˜ì—ˆìŠµë‹ˆë‹¤.");
-            System.out.println("ì •ë‹µìž…ë‹ˆë‹¤.");
+            System.out.println("¿¬ºñ Á¶ÀÛÀÌ È®ÀÎµÇ¾ú½À´Ï´Ù.asd");
+            System.out.println("Á¤´äÀÔ´Ï´Ù.asd");
         }
     }
 
@@ -37,7 +37,10 @@ public class EncapsulationExample {
             return realFuelEfficiency;
         }
 
-        public void setRealFuelEfficiency(double realFuelEfficiency) {
+        public void setRealFuelEfficiency(double realFuelEfficiency) throws IllegalArgumentException{
+            if (realFuelEfficiency> this.realFuelEfficiency) {
+                throw new IllegalArgumentException();
+            }
             this.realFuelEfficiency = realFuelEfficiency;
         }
     }
