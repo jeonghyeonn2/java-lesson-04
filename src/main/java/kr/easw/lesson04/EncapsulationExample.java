@@ -62,3 +62,4 @@ public class EncapsulationExample {
         return new PerformanceManipulation();
     }
 }
+

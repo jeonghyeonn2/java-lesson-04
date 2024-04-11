@@ -44,7 +44,7 @@ public class ImplementationExample {
          * @param data 계산이 진행되어야 할 값
          */
         public String eval(String first, int data) {
-            int result= (data/2)*7+(int)Math.pow(3,2)/5;
+            int result= (int)Math.pow((data/2)*7,3)/5;
             return first+ "-"+ result;
         }
     }
